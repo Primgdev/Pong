@@ -5,7 +5,8 @@ using UnityEngine;
 public class AI : MonoBehaviour
 {
     Rigidbody2D ai;
-    public Transform ball;
+   public GameObject pong;
+    Transform ball;
     float speed = 5.0f;
     public AudioSource hit;
 
@@ -13,6 +14,8 @@ public class AI : MonoBehaviour
     void Start()
     {
         ai = GetComponent<Rigidbody2D>();
+        pong = GameObject.FindWithTag("ball");
+        ball = pong.transform;
     }
 
 
